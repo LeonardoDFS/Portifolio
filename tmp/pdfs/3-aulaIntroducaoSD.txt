@@ -1,0 +1,433 @@
+
+
+=== PAGE 1 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+SISTEMAS DISTRIBU´IDOS
+DEPARTAMENTO DE COMPUTAC ¸˜AO
+AULA 1
+Introdu¸ c˜ ao a Sistemas Distribu ´ ıdos
+Prof. Rog´ erio Pozza
+pozza@utfpr.edu.br
+9 de abril de 2025
+1 / 36
+
+=== PAGE 2 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Sum´ ario
+1 Introdu¸ c˜ ao
+2 Middleware
+3 Objetivos
+4 D´ uvidas
+2 / 36
+
+=== PAGE 3 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Defini¸ c˜ ao
+Tanbenbaum e Van Steen
+Conjunto de computadores independentes que se apresenta a
+seus usu´ arios como um sistema ´ unico e coerente
+Colouris et. al
+´E aquele no qual os componentes localizados em
+computadores interligados em rede se comunicam e coordenam
+suas a¸ c˜ oes apenas passando mensagens
+Silberchatz
+Cole¸ c˜ ao de processadores fracamente acoplados e conectados
+por uma rede de comunica¸ c˜ ao
+3 / 36
+
+=== PAGE 4 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Defini¸ c˜ ao
+4 / 36
+
+=== PAGE 5 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Defini¸ c˜ ao
+Sistemas N˜ ao S˜ ao Aplica¸ c˜ oes
+Uma aplica¸ c˜ ao ´ e um execut´ avel em uma m´ aquina, e
+geralmente os dados s˜ ao locais
+Aplica¸ c˜ oes n˜ ao precisam conhecer detalhes sobre conectividade
+Sistemas podem ser desenvolvidos com v´ arios execut´ aveis em
+v´ arias m´ aquinas, e dados podem ser gravados em v´ arios
+lugares
+Sistemas precisam lidar ou trabalhar com detalhes da
+conectividade
+5 / 36
+
+=== PAGE 6 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Exemplos
+6 / 36
+
+=== PAGE 7 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Exemplos
+7 / 36
+
+=== PAGE 8 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Exemplos
+Projeto SETI
+Projeto Einstein@home
+Projeto Asteriods@home
+Data Center do Google em Dalles
+Data Center Equinix
+Data Center Santander
+8 / 36
+
+=== PAGE 9 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Middleware
+Middleware ´ e um software que conecta programas separados e
+j´ a existentes
+Normalmente fica entre a aplica¸ c˜ ao e o SO
+9 / 36
+
+=== PAGE 10 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Middleware
+Interfaces s˜ ao descritas por uma linguagem de defini¸ c˜ ao de
+interface (Interface Definition Language – IDL)
+Especificam com precis˜ ao os nomes das fun¸ c˜ oes, tipos dos
+parˆ ametros, valores de retorno, poss ´ ıveis exce¸ c˜ oes etc.
+Processo se comunica com outro que fornece uma interface
+Duas partes independentes desenvolvam implementa¸ c˜ oes
+diferentes da mesma interface
+SD separados funcionem exatamente do mesmo modo
+10 / 36
+
+=== PAGE 11 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Middleware
+Existˆ encia da interface padr˜ ao e espec ´ ıfica
+Middleware retira a complexidade das camadas mais baixas
+11 / 36
+
+=== PAGE 12 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Middleware x API
+Caracter ´ ısticaMiddleware API
+Fun¸ c˜ ao Gerencia a comunica¸ c˜ ao e inte-
+gra¸ c˜ ao entre componentes dis-
+tribu ´ ıdos
+Define como os componentes se
+comunicam
+´E software? Sim, executa processos pr´ opriosN˜ ao necessariamente – ´ e uma
+interface
+ResponsabilidadeComunica¸ c˜ ao, mensagens, sin-
+croniza¸ c˜ ao
+Defini¸ c˜ ao de m´ etodos acess ´ ıveis
+Exemplos Kafka, RMI, gRPC REST, JSON-RPC, bibliotecas
+Python/Java
+N ´ ıvel Infraestrutura Interface
+12 / 36
+
+=== PAGE 13 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Middleware - exemplo
+RMI – Remote Method Invocation
+T´ ecnica que utiliza o paradigma de orienta¸ c˜ ao a objetos em
+sistemas distribu ´ ıdos
+Posso ter objetos localizados em outro dispositivo e mesmo
+assim invocar seus m´ etodos
+Um exemplo ´ e o RMI Java, um middleware feito para a
+linguagem Java
+13 / 36
+
+=== PAGE 14 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Objetivos
+Objetivos e metas tem rela¸ c˜ ao com um SD ser funcional
+Dif ´ ıcil um SD de longa distˆ ancia ter o mesmo tempo de
+resposta que sistemas locais
+Compartilhamento de recursos
+Seguran¸ ca
+Reduzir a comunica¸ c˜ ao indesejada
+Transparˆ encia
+Abertura
+Escalabilidade
+14 / 36
+
+=== PAGE 15 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Transparˆ encia
+Formas de oculta¸ c˜ ao para os usu´ arios e desenvolvedores de
+aplica¸ c˜ ao
+Deseja-se que o sistema seja percebido como ´ unico, ao inv´ es
+de uma cole¸ c˜ ao de partes independentes
+´E uma das m´ etricas de sucesso de um SD
+Usu´ ario pode interagir sem precisar conhecer detalhes da
+implementa¸ c˜ ao
+15 / 36
+
+=== PAGE 16 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Transparˆ encia
+16 / 36
+
+=== PAGE 17 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Abertura
+Caracter ´ ıstica que determina se um sistema pode ser
+estendido de diferentes maneiras
+´E poss ´ ıvel interagir com outros sistemas sem impor restri¸ c˜ oes
+ou adapta¸ c˜ oes severas
+Hardware
+Inclus˜ ao de dispositivos de fabricantes distintos /infraestrutura
+Software
+APIs/Seguran¸ ca
+Protocolos de comunica¸ c˜ ao
+Recursos compartilhados
+17 / 36
+
+=== PAGE 18 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Abertura
+Interoperabilidade
+Capacidade de um sistema se comunicar de forma transparente
+com outro sistema (semelhante ou n˜ ao)
+SOAP e REST
+Portabilidade
+Caracterizada por uma aplica¸ c˜ ao que possa ser executada, sem
+modifica¸ c˜ ao, em outro SD
+JAVA, Docker, Python e NODE.js
+18 / 36
+
+=== PAGE 19 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Abertura - Pol ´ ıtica e Mecanismo
+Promover a abertura
+Separar a l´ ogica de controle (pol ´ ıtica) da implementa¸ c˜ ao
+concreta (mecanismo)
+Mudar a pol ´ ıtica sem afetar o respectivo mecanismo
+Diferentes pol ´ ıticas possam ser aplicadas ao mesmo
+mecanismo
+19 / 36
+
+=== PAGE 20 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Abertura - Pol ´ ıtica e Mecanismo
+SD deve ser organizado com um conjunto de componentes
+relativamente pequenos e de f´ acil substitui¸ c˜ ao ou adapta¸ c˜ ao
+Especifica¸ c˜ oes monol ´ ıticas a substitui¸ c˜ ao ou adapta¸ c˜ ao de um
+´ unico componente pode afetar o sistema todo
+Sistemas abertos x fechado
+Necess´ aria uma separa¸ c˜ ao entre o que ´ e pol ´ ıtica e mecanismo
+Por exemplo
+Gerenciamento de recursos de rede em um ambiente de
+computa¸ c˜ ao em nuvem
+A pol ´ ıtica de aloca¸ c˜ ao de recursos pode ser definida como a
+quantidade m´ axima de CPU, mem´ oria RAM e armazenamento
+que cada usu´ ario ou aplicativo pode usar
+O mecanismo ´ e o software de gerenciamento de recursos
+alocado para os recursos necess´ arios ser´ a executado em v´ arios
+servidores
+Navegadores
+20 / 36
+
+=== PAGE 21 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Escalabilidade
+Propriedade que mede a capacidade do sistema em lidar
+facilmente com uma quantidade crescente de trabalho
+Trˆ es medidas para medir a escalabilidade
+Tamanho – F´ acil de adicionar recursos e usu´ arios
+Geogr´ afica– Distˆ ancia entre usu´ arios e recursos pode ser
+longe
+Administrativa – F´ acil gerenciar organiza¸ c˜ oes administrativas
+diferentes
+Compromisso entre escalabilidade e desempenho
+N˜ ao explorar particularidades para melhor desempenho
+21 / 36
+
+=== PAGE 22 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Escalabilidade - Tamanho
+Dados centralizados
+Dados localizados em apenas um local
+Possibilidade de gargalo no sistema de comunica¸ c˜ ao
+Distribui¸ c˜ ao pode ser impratic´ avel, por quest˜ oes de seguran¸ ca
+Exemplo de sistema escal´ avel em tamanho: DNS
+Estrat´ egia de banco de dados distribu ´ ıdo, com 3 n ´ ıveis de
+servidores
+Possibilidade de servidores locais, numa esp´ ecie de cache
+Facilita a adi¸ c˜ ao de novas associa¸ c˜ oes e as consultas
+22 / 36
+
+=== PAGE 23 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Escalabilidade - Tamanho
+Nos algoritmos centralizados os dados s˜ ao coletados de todos
+os dispositivos para tomar decis˜ ao
+Exemplo: roteamento de mensagem no sistema distribu ´ ıdo
+Ao colher os custos de carga entre os dispositivos, ´ e poss ´ ıvel
+calcular a rota ´ otima
+Depois disso, as rotas podem ser propagadas a todos os
+usu´ arios
+Recolher toda essa informa¸ c˜ ao em um ´ unico n´ o pode ser
+tornar o gargalo do sistema
+23 / 36
+
+=== PAGE 24 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Escalabilidade - Tamanho
+Algoritmos descentralizados devem ser preferidos
+Caracter ´ ısticas de algoritmos descentralizados
+Nenhuma m´ aquina tem informa¸ c˜ ao completa do estado do
+sistema
+As m´ aquinas tomam decis˜ oes com as informa¸ c˜ oes locais
+A falha no algoritmo n˜ ao quebra todo o sistema
+N˜ ao existe uma suposi¸ c˜ ao de um rel´ ogio global
+Exemplos: Blockchain, BitTorrent
+24 / 36
+
+=== PAGE 25 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Escalabilidade - Geogr´ afica
+Um dos principais problemas ´ e a comunica¸ c˜ ao s ´ ıncrona
+Processo requisitante fica bloqueado at´ e que receba a resposta
+do processo requerido (fica parado at´ e que a resposta seja
+recebida)
+Propaga¸ c˜ ao limitada pela velocidade da luz (limita¸ c˜ ao f ´ ısica)
+Exemplo
+Transmiss˜ ao de dados em redes de longa distˆ ancia
+Al´ em da propaga¸ c˜ ao, dispositivos de rede introduzem atrasos
+Filas de recep¸ c˜ ao e transmiss˜ ao
+Consulta, repasse e filtragem em roteadores e switches
+25 / 36
+
+=== PAGE 26 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Atraso de propaga¸ c˜ ao
+Extremos do Brasil – Oiapoque ao Chu ´ ı (4.174 Km)
+Tempo de propaga¸ c˜ ao do sinal entre os dispositivos
+(velocidade da luz, somente um trecho): 13,91 ms
+A velocidade pode ser considerada menor em alguns trechos
+devido ao meio met´ alico
+Tempo m ´ ınimo de resposta: 27,82 ms, sem considerar
+Qualquer tipo de atraso dos equipamentos
+Tempo de transmiss˜ ao dos dados (chegado do ´ ultimo bit do
+pacote)
+Empacotamento dos dados
+Tempo de processamento no executor
+26 / 36
+
+=== PAGE 27 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Atraso de propaga¸ c˜ ao
+Tempo bloqueado
+Sujeito ao tempo de propaga¸ c˜ ao, tempo de processamento e
+velocidade do link de comunica¸ c˜ ao
+27 / 36
+
+=== PAGE 28 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Escalabilidade - Geogr´ afica
+Comunica¸ c˜ ao em redes de longa distˆ ancia
+N˜ ao confi´ avel e apenas ponto a ponto
+Em redes locais, ´ e poss ´ ıvel a comunica¸ c˜ ao embroadcast
+Al´ em da probabilidade de erro ser menor
+DHCP, UPnP
+Com broadcast, localiza¸ c˜ ao de servi¸ co ´ e um processo mais
+simples
+Basta mandar uma mensagem de broadcast e aguardar a
+resposta
+Como mensagens de broadcast n˜ ao s˜ ao propagadas pelos
+roteadores, n˜ ao ´ e poss ´ ıvel fazer o mesmo em sistemas
+geograficamente espalhados
+Precisa de servi¸ cos de localiza¸ c˜ ao especialmente projetados
+Centraliza¸ c˜ ao pode limitar a escalabilidade geogr´ afica
+Atrasos de propaga¸ c˜ ao e limita¸ c˜ ao do link de rede
+28 / 36
+
+=== PAGE 29 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Escalabilidade - Administrativa
+Capacidade de um sistema crescer e gerenciar o aumento do
+n´ umero de usu´ arios, organiza¸ c˜ oes ou dom ´ ınios administrativos
+sem impor uma carga administrativa proporcionalmente
+crescente
+Importante para descentraliza¸ c˜ ao do controle e flexibilidade
+administrativa
+29 / 36
+
+=== PAGE 30 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Escalabilidade - Administrativa
+Pol ´ ıticas conflitantes sobre
+Uso de recursos (compartilhar e largura de banda)
+Gerenciamento (atualiza¸ c˜ oes/corre¸ c˜ oes/conformidades)
+Seguran¸ ca (senhas curtas/longas)
+´E poss ´ ıvel confiar em componentes em outros dom ´ ınios
+administrativos?
+Medidas de seguran¸ ca necess´ arias
+SD se protege dos demais componentes do novo dom ´ ınio
+limitando acesso a recursos por parte desses usu´ arios
+Novo dom ´ ınio se protege de ataques vindos do SD
+Impor limite de acesso para os integrantes do sistema
+distribu ´ ıdo
+30 / 36
+
+=== PAGE 31 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Escalabilidade - T´ ecnicas
+Aumenta a disponibilidade dos recursos
+Balanceamento de carga
+Oculta a latˆ encia de comunica¸ c˜ ao caso haja grande dispers˜ ao
+geogr´ afica
+31 / 36
+
+=== PAGE 32 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Escalabilidade - T´ ecnicas
+Sistema DNS ´ e distribu ´ ıdo em v´ arias m´ aquinas por zonas
+O endere¸ co nl.vu.cs.fruits passa por Z1, Z2 e Z3 apenas
+32 / 36
+
+=== PAGE 33 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Escalabilidade - T´ ecnicas
+Replica¸ c˜ ao
+Espalhar o mesmo conte´ udo por partes do sistema
+Melhor distribui¸ c˜ ao de carga
+Uma maneira especial de replica¸ c˜ ao:cache
+Diferen¸ ca entrecache e replica¸ c˜ ao:cache ´ e uma decis˜ ao de
+cliente e replica¸ c˜ ao ´ e uma decis˜ ao do propriet´ ario
+Tanto replica¸ c˜ ao quantocache resultam em problemas de
+consistˆ encia
+33 / 36
+
+=== PAGE 34 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Escalabilidade - Resumo
+Escalabilidade em tamanho
+Menos problem´ atica
+Muitas vezes, pode ser resolvida com o upgrade de uma
+m´ aquina
+Escalabilidade geogr´ afica
+Limitado por quest˜ oes f ´ ısicas
+Combina¸ c˜ ao de distribui¸ c˜ ao, replica¸ c˜ ao ecache
+Escalabilidade administrativa
+Mais complexa, pois lida com aspectos n˜ ao t´ ecnicos
+Ignorar a existˆ encia dos diversos dom ´ ınios
+Sistemas peer-to-peer
+34 / 36
+
+=== PAGE 35 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Ciladas
+Rede ´ e confi´ avel
+Rede ´ e segura
+Rede ´ e homogˆ enea
+Topologia constante
+Latˆ encia zero
+Largura de banda ´ e infinita
+Custo de transporte ´ e zero
+Existe somente um administrador
+35 / 36
+
+=== PAGE 36 ===
+Introdu¸ c˜ ao Middleware Objetivos D´ uvidas
+Sistemas Distribu ´ ıdos
+Grato pela aten¸ c˜ ao
+36 / 36

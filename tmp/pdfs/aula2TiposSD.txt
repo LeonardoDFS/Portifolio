@@ -1,0 +1,547 @@
+
+
+=== PAGE 1 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+SISTEMAS DISTRIBU´IDOS
+DEPARTAMENTO ACADˆEMICO
+DE COMPUTAC ¸˜AO
+AULA 2
+Tipos de Sistemas Distribu ´ ıdos
+Prof. Rog´ erio Pozza
+pozza@utfpr.edu.br
+19 de novembro de 2024
+1 / 48
+
+=== PAGE 2 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Sum´ ario
+1 Sistemas de Computa¸ c˜ ao de Alto Desempenho
+Computa¸ c˜ ao em Cluster
+Computa¸ c˜ ao em Grade
+2 Computa¸ c˜ ao em Nuvem
+3 Sistemas de Informa¸ c˜ ao
+4 Sistemas Pervasivos
+5 Exerc ´ ıcios
+2 / 48
+
+=== PAGE 3 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Computa¸ c˜ ao de Alto Desempenho
+Sistemas voltados para execu¸ c˜ ao de tarefas decomputa¸ c˜ ao
+de alto desempenho
+Computa¸ c˜ ao em Clusterconsiste em um conjunto de
+m´ aquinas semelhantes conectadas por meio de uma rede local
+de alta velocidade e mesmo sistema operacional
+Computa¸ c˜ ao em Grades˜ ao desenvolvidos como uma
+federa¸ c˜ ao de computadores, em que cada sistema pode estar
+em um dom ´ ınio administrativo diferente, com softwares,
+hardwares e tecnologia de redes tamb´ em diferentes
+3 / 48
+
+=== PAGE 4 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Computa¸ c˜ ao em Cluster
+Caracter ´ ıstica homogˆ enea
+Hardware
+Conjunto de PCs ou esta¸ c˜ oes de trabalho semelhantes
+Conex˜ ao entre os hardwares via rede local
+Software
+Normal ter o mesmo SO entre as m´ aquinas
+Geralmente um ´ unico programa executando em paralelo
+Normalmente utilizado para computa¸ c˜ ao paralela
+Forte acoplamento entre os n´ os
+4 / 48
+
+=== PAGE 5 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Computa¸ c˜ ao em Cluster
+Rela¸ c˜ ao pre¸ co/desempenho e facilidade de projetar
+supercomputador com tecnologia de prateleira
+Lista TOP500 Supercomputadores mundiais – Link
+Reportagem no TECHTUDO – Link
+5 / 48
+
+=== PAGE 6 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Computa¸ c˜ ao em Cluster
+N´ o mestre
+Alocar tarefas aos n´ os, organizar a ﬁla de tarefas e interface
+com usu´ arios
+Provˆ e transparˆ encia de localiza¸ c˜ ao e migra¸ c˜ ao
+Executa um middleware para execu¸ c˜ ao de programas e
+gerenciamento do cluster
+N´ os de computa¸ c˜ ao normalmente precisam apenas do SO
+Exemplo de arquitetura em cluster: Beowulf
+6 / 48
+
+=== PAGE 7 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Computa¸ c˜ ao em Cluster
+Beowulf
+baseado em
+Linux
+Acesso
+pelo n´ o
+mestre que
+executa um
+middleware
+7 / 48
+
+=== PAGE 8 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Computa¸ c˜ ao em Cluster
+Primeiro
+Beowulf Nasa
+com 128
+processadores
+8 / 48
+
+=== PAGE 9 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Computa¸ c˜ ao em Cluster
+Beowulf com
+256 dual
+processadores
+Xeon de 2.4
+GHz (2008)
+9 / 48
+
+=== PAGE 10 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Computa¸ c˜ ao em Cluster
+MOSIX – Multicomputer Distributed Operating System
+Abordagem de uma imagem de um sistema ´ unico
+Transparˆ encia de distribui¸ c˜ ao com migra¸ c˜ ao dinˆ amica de
+processos
+Processo iniciado em um n´ os pode ser movido de forma
+transparente para quaisquer outros n´ os
+Site Oﬁcial MOSIX – Link
+10 / 48
+
+=== PAGE 11 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Computa¸ c˜ ao em Cluster
+Mosix com 120
+n´ os: 74 com
+dual core (Intel
+Core2 Duo
+E6600) e 46
+com Quad
+Core (Intel
+Core2 Quad
+Q6700)
+11 / 48
+
+=== PAGE 12 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Computa¸ c˜ ao em Cluster
+Exemplos
+CENAPAD (Unicamp) – Link e o guia do usu´ ario Link
+SDumont (Laborat´ orio Nacional de Computa¸ c˜ ao Cient ´ ıﬁca,
+RJ) – Link
+LCC-CENAPAD (UFMG) – Link e Link
+12 / 48
+
+=== PAGE 13 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Computa¸ c˜ ao em Grade
+Caracter ´ ıstica de heterogeneidade
+Hardware de diferentes organiza¸ c˜ oes s˜ ao reunidos e dispersos
+entre eles
+M´ aquinas que oferecem servi¸ cos
+Permitir a colabora¸ c˜ ao de um grupo de pessoas ou institui¸ c˜ oes
+Pessoas que pertencem ` a mesma organiza¸ c˜ ao tˆ em direitos de
+acesso aos recursos
+Exemplos
+PLANETLAB (RNP faz parte dela)
+Servidores de computa¸ c˜ ao, armazenamento e bancos de dados
+13 / 48
+
+=== PAGE 14 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Computa¸ c˜ ao em Grade
+Camada de Aplica¸ c˜ ao: aplica¸ c˜ oes do
+ambiente de computa¸ c˜ ao em grade
+Camada Coletiva: Manipula acesso a
+m´ ultiplos recursos (descoberta de recursos,
+aloca¸ c˜ ao e escalonamento de tarefas,
+replica¸ c˜ ao, etc.)
+Camada Conectividade: Consiste em
+protocolos de comunica¸ c˜ ao para suportar
+transa¸ c˜ oes em grade que envolvem m´ ultiplos
+recursos, seguran¸ ca e autentica¸ c˜ ao de
+processos
+Camada de Recurso : Gerenciamento de um
+´ unico recurso e utiliza as fun¸ c˜ oes da camada
+de conectividade
+Camada Base: Hardware
+Figura: Parte hachurada ´ e o
+middleware
+14 / 48
+
+=== PAGE 15 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Computa¸ c˜ ao em Grade
+LHC (Large Hadron Collider ) ou Grande Colisor de H´ adrons
+do CERN ( Conseil Europ´ een pour la Recherche Nucl´ eaire–
+Organiza¸ c˜ ao Europeia para a Pesquisa Nuclear)
+Maior acelerador de part ´ ıculas do mundo e tamb´ em o de
+maior energia existente
+Possui um t´ unel de 27 km de circunferˆ encia, a 175 metros
+abaixo do n ´ ıvel do solo na fronteira da Fran¸ ca com Su ´ ı¸ ca
+Recriar o BigBang
+15 / 48
+
+=== PAGE 16 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Computa¸ c˜ ao em Grade
+16 / 48
+
+=== PAGE 17 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Computa¸ c˜ ao em Grade
+Produz por ano 50 a 70 Petabytes de dados
+Uma grade computacional LHC est´ a em desenvolvimento para
+processar a grande quantidade de dados gerados
+Permitir´ a transferˆ encia de dados entre o CERN e institui¸ c˜ oes
+acadˆ emicas por todo o mundo
+The project LHC@home auxilia no processamento do
+acelerador de part ´ ıculas
+Permite que usu´ arios concedam processamento dos seus
+computadores para executar simula¸ c˜ oes ao LHC (como as
+part ´ ıculas iriam percorrer os t´ uneis)
+The project LHC@home – Link
+17 / 48
+
+=== PAGE 18 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Computa¸ c˜ ao em Nuvem
+Uso de recurso de computa¸ c˜ ao
+Como uma m´ aquina virtual
+Armazenamento
+Aplica¸ c˜ ao
+Semelhante ao uso da eletricidade (terceirizados)
+Pagar ao inv´ es de ter que desenvolver e manter infraestrutura
+de computa¸ c˜ ao
+Elasticidade/escalabilidade conforme demanda
+Pay-per-use os usu´ arios s´ o pagam o que consomem
+Computa¸ c˜ ao em Grade ocorre em um ambiente fechado e
+Computa¸ c˜ ao em Nuvem ´ e uma organiza¸ c˜ ao aberta, como o
+Gmail, em que qualquer pessoa pode utilizar/associar
+18 / 48
+
+=== PAGE 19 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Computa¸ c˜ ao em Nuvem
+19 / 48
+
+=== PAGE 20 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Computa¸ c˜ ao em Nuvem
+IaaS
+contrato para uma capacidade de hardware que corresponde ` a
+mem´ oria, armazenamento, processamento, roteadores, entre
+outros
+PaaS
+contrato para um ambiente completo de desenvolvimento para
+criar, hospedar e gerir um software pr´ oprio
+SaaS
+contrato para licen¸ ca de acesso ao software, muitas vezes com
+recursos limitados (Skype, OneDrive e Oﬃce 365)
+20 / 48
+
+=== PAGE 21 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Sistemas de Informa¸ c˜ ao
+Aplica¸ c˜ oes mais soﬁsticadas s˜ ao separadas em componentes
+independentes
+Integra¸ c˜ ao ocorre na medida em que as aplica¸ c˜ oes se
+comunicam entre si
+Sistemas corporativos para integrar diversas aplica¸ c˜ oes em que
+a interoperabilidade se mostrou dif ´ ıcil (interfaces diferentes
+para diferentes plataformas)
+Sistema de Processamento de Transa¸ c˜ oes
+Integra¸ c˜ ao de Aplica¸ c˜ oes Empresarias
+21 / 48
+
+=== PAGE 22 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Sistemas de Informa¸ c˜ ao
+Componentes independentes podem estar em
+m´ aquinas separadas
+Sistema pode crescer com menos impacto em
+rela¸ c˜ ao ao modelo monol ´ ıtico
+22 / 48
+
+=== PAGE 23 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Sistemas de Processamento de Transa¸ c˜ oes
+Transa¸ c˜ ao´ e baseada no conceito de a¸ c˜ ao
+atˆ omica, consistente, isolada e dur´ avel
+(ACID)
+T´ ecnica permite o encapsulamento de um
+conjunto de opera¸ c˜ oes
+Se o processamento ocorrer sem a presen¸ ca
+de falhas, garante-se que todas as opera¸ c˜ oes
+sejam executadas
+Caso ocorra falha, em qualquer uma das
+opera¸ c˜ oes do conjunto, garante-se que
+qualquer resultado obtido por este conjunto
+ser´ a ignorado, voltando o processamento ao
+estado anterior ` a execu¸ c˜ ao da transa¸ c˜ ao
+23 / 48
+
+=== PAGE 24 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Sistemas de Processamento de Transa¸ c˜ oes
+Requer primitivas que devem ser fornecidas pelo SD ou pela
+linguagem para prover integridade
+24 / 48
+
+=== PAGE 25 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Sistemas de Processamento de Transa¸ c˜ oes
+Caracter ´ ıstica ACID
+Atˆ omica: A transa¸ c˜ ao aparece como se fosse indivis ´ ıvel
+Consistente: N˜ ao viola as invariantes do sistema
+Isoladas: Transa¸ c˜ oes concorrentes n˜ ao interferem entre si
+Dur´ aveis: Uma vez comprometida ( commit), as altera¸ c˜ oes
+s˜ ao permanentes
+25 / 48
+
+=== PAGE 26 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Sistemas de Processamento de Transa¸ c˜ oes
+Transa¸ c˜ ao aninhada
+Transa¸ c˜ ao consiste em uma quantidade de subtransa¸ c˜ oes
+(podem executar em m´ aquinas diferentes)
+Se uma subtransa¸ c˜ ao falhar, a transa¸ c˜ ao pai ´ e abortada e o
+sistema ´ e restaurado
+26 / 48
+
+=== PAGE 27 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Sistemas de Processamento de Transa¸ c˜ oes
+Monitor de processamento de transa¸ c˜ oes (mestre)
+Permite que uma aplica¸ c˜ ao acesse v´ arios servidores e banco de
+dados oferecendo um modelo transacional
+27 / 48
+
+=== PAGE 28 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Sistemas de Processamento de Transa¸ c˜ oes
+Protocolo Two-Phase Commit (2PC)
+Oracle e IBM DB2
+Java JTA
+Apache Kafka
+Paxos
+Algoritmo para tratar n´ os que podem falhar, mensagens que
+podem ser perdidas e redes que podem sofrer atrasos.
+Gerenciador de lock/Servidor de nomes do Google Chubby
+Apache Zookeeper (bigdata)
+Servi¸ co de gerenciamento decluster da Microsoft Autopilot
+usado no motor de busca do Bing
+Controlador VMware
+Linguagens de programa¸ c˜ ao e SBGDs
+28 / 48
+
+=== PAGE 29 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Integra¸ c˜ ao de Aplica¸ c˜ oes Empresarias
+Desvincula¸ c˜ ao das aplica¸ c˜ oes dos BD evidencia o
+desenvolvimento de facilidades para integrar aplica¸ c˜ oes
+independentemente dos seus BDs
+N˜ ao apenas transa¸ c˜ oes com requisi¸ c˜ ao/resposta em forma de
+transa¸ c˜ oes com os BD
+Middleware de comunica¸ c˜ ao
+RPC
+RMI
+MOM (Middleware orientado a mensagem ´ e um reposit´ orio
+compartilhado de mensagens entre entidades – Facebook)
+29 / 48
+
+=== PAGE 30 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Sistemas de Informa¸ c˜ ao
+Integra¸ c˜ ao de Aplica¸ c˜ oes
+Aplica¸ c˜ oes j´ a existentes trocam informa¸ c˜ oes entre elas
+Middleware facilita a integra¸ c˜ ao de aplica¸ c˜ oes empresariais
+Reusabilidade
+V´ arios modelos
+30 / 48
+
+=== PAGE 31 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Sistemas de Integra¸ c˜ ao de Aplica¸ c˜ oes
+RPC e RMI possuem desvantagens de estar em funcionamento
+no momento da comunica¸ c˜ ao, al´ em do conhecimento de como
+se referir um ao outro
+Middleware orientado a mensagem ( Message-oriented
+Middleware – MOM )
+Aplica¸ c˜ oes enviam mensagens a pontos l´ ogicos do sistema e
+podem indicar um tipo espec ´ ıﬁco de mensagem
+O middleware de comunica¸ c˜ ao ser´ a respons´ avel de entregar as
+mensagens ` as aplica¸ c˜ oes
+S˜ ao conhecidos tamb´ em comopublicar/subscrever
+31 / 48
+
+=== PAGE 32 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Sistemas Pervasivos
+Pervasivo ´ e algo que tende a se espalhar, propagar ou
+difundir; completo e de uso geral
+Dispositivos m´ oveis introduzem novos desaﬁos para o
+desenvolvimento de sistemas distribu ´ ıdos
+N˜ ao possuem conex˜ oes permanentes ` a rede
+Uma grande parte de tais conex˜ oes n˜ ao possui alta qualidade
+Instabilidade ´ e o comportamento esperado desses sistemas
+Dispositivos de computa¸ c˜ ao m´ oveis e embarcados pequenos
+alimenta¸ c˜ ao por bateria
+mobilidade
+conex˜ ao sem ﬁo
+32 / 48
+
+=== PAGE 33 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Sistemas Pervasivos
+Ausˆ encia de controle administrativo humano
+Dispositivos precisam descobrir automaticamente o ambiente
+e se adaptar ao contexto para suas fun¸ c˜ oes
+Ambiente pode mudar o tempo todo e o dispositivo tem que
+adotar mudan¸ cas contextuais
+Por ter composi¸ c˜ ao ad hoc, ter facilidade na conﬁgura¸ c˜ ao das
+aplica¸ c˜ oes executada em dispositivos
+Melhor expor a distribui¸ c˜ ao de dados, processos e controles ao
+inv´ es de ocult´ a-las
+33 / 48
+
+=== PAGE 34 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Sistemas Pervasivos Dom´ esticos
+Compostos por computadores pessoais com o objetivo de
+integrar eletrˆ onicos de consumo em um ´ unico sistema
+Desaﬁo ´ e o sistema ser autoconﬁgur´ avel e autogerenci´ avel
+Problemas com atualiza¸ c˜ oes de software eﬁrmware sem
+interven¸ c˜ ao manual e sem violar a compatibilidade com outros
+dispositivos
+Problemas inerentes a SD, como dados pessoais, dispositivos
+compartilhados, espa¸ co em nuvem
+Dispositivos serem reparados remotamente
+34 / 48
+
+=== PAGE 35 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Sistemas Pervasivos Dom´ esticos
+Servidor dom´ estico
+35 / 48
+
+=== PAGE 36 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Sistemas eHealth e mHealth
+Monitorar o bem-estar de indiv ´ ıduos
+Organizados em uma rede corporal ( Body Area Network –
+BAN ou Wireless Body Area Network – WBAN)
+Rede pode ser controlada por um access point ou enviar
+dados para uma outra rede externa
+36 / 48
+
+=== PAGE 37 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Sistemas eHealth e mHealth
+37 / 48
+
+=== PAGE 38 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Sistemas eHealth e mHealth
+38 / 48
+
+=== PAGE 39 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Sistemas eHealth e mHealth
+39 / 48
+
+=== PAGE 40 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Sistemas eHealth e mHealth
+12GB de mem´ oria livre (total de 16GB)
+Conectividade 802. 11b/g Wi-Fi e Bluetooth
+Cˆ amera de 5 megapixel
+Resolu¸ c˜ ao do v ´ ıdeo de 720p
+40 / 48
+
+=== PAGE 41 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Sistemas eHealth e mHealth
+41 / 48
+
+=== PAGE 42 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Sistemas eHealth e mHealth
+Desaﬁos
+Onde e como os dados monitorados dever˜ ao ser armazenados?
+Como evitar a perda de dados cruciais?
+Qual ´ e a infraestrutura necess´ aria para gerar e transmitir sinais
+de alerta?
+Como os m´ edicos podem dar retornoon-line?
+Como pode ser alcan¸ cada a robustez do sistema de
+monitora¸ c˜ ao?
+Quais s˜ ao as quest˜ oes de seguran¸ ca e como as pol ´ ıticas
+adequadas podem ser impostas?
+Baixa probabilidade de informa¸ c˜ oes de tratamentos de sa´ ude
+ﬁquem em um ´ unico servidor e que dispositivos tenham
+funcionalidades m ´ ınimas
+Redes corporais ter˜ ao de suportar processamento de dados na
+rede
+Dados de monitoramento ter˜ ao de ser agregados ou
+processados antes de serem armazenados permanentemente ou
+enviados a um m´ edico
+42 / 48
+
+=== PAGE 43 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Sistemas Pervasivos
+Apple Watch chama emergˆ encia e salva vida de usu´ ario –
+Link
+Galaxy salva vida de tripula¸ c˜ ao em barco ` a deriva – Link
+Recurso do iPhone salva usu´ ario ap´ os acidente de carro –
+Link
+43 / 48
+
+=== PAGE 44 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Redes de Sensores
+Exemplo de SD em que os sensores possuem aplica¸ c˜ oes que
+comunicam-se entre si
+Cada n´ o ´ e equipado com um dispositivo de sensoriamento
+Maioria das redes utiliza comunica¸ c˜ ao sem ﬁo
+Alimentados por baterias
+Sistemas Ciber-f ´ ısicos (carros autˆ onomos, monitoramento de
+vulc˜ oes, de enchentes, ﬂorestas, etc)
+44 / 48
+
+=== PAGE 45 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Redes de Sensores
+45 / 48
+
+=== PAGE 46 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Exerc ´ ıcios
+Moodle
+46 / 48
+
+=== PAGE 47 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+PAluno
+Hor´ arios
+Toda quarta-feira das 13h50m as 14h40m; 19h30m as 21h00m e
+quinta-feira das 13h00m as 13h50m
+Contato
+E-mail pozza@utfpr.edu.br
+47 / 48
+
+=== PAGE 48 ===
+Sistemas de Computa¸ c˜ ao de Alto DesempenhoComputa¸ c˜ ao em NuvemSistemas de Informa¸ c˜ aoSistemas Pervasivos Exerc ´ ıcios
+Sistemas Distribu ´ ıdos
+Grato pela aten¸ c˜ ao
+48 / 48

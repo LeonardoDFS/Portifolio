@@ -1,0 +1,420 @@
+
+
+=== PAGE 1 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+SISTEMAS DISTRIBU´IDOS
+DEPARTAMENTO DE COMPUTAC ¸˜AO
+AULA 5
+Sincroniza¸ c˜ ao de Rel´ ogios
+Prof. Rog´ erio Pozza
+pozza@utfpr.edu.br
+17 de dezembro de 2024
+1 / 40
+
+=== PAGE 2 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Sum´ ario
+1 Sincroniza¸ c˜ ao de Rel´ ogios
+2 Rel´ ogios F ´ ısicos
+3 Rel´ ogios L´ ogicos
+4 Exerc ´ ıcios
+5 D´ uvidas
+2 / 40
+
+=== PAGE 3 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Sincroniza¸ c˜ ao de Rel´ ogios
+Rel´ ogios s˜ ao essenciais em computa¸ c˜ ao
+medir o tempo
+identiﬁcar ordem de eventos
+N˜ ao h´ a problemas de sincroniza¸ c˜ ao em sistemas centralizados
+Em sistemas distribu ´ ıdos, obter um hor´ ario comum a v´ arios
+computadores n˜ ao ´ e trivial
+3 / 40
+
+=== PAGE 4 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Sincroniza¸ c˜ ao de Rel´ ogios
+Processos n˜ ao devem acessar ao mesmo tempo um recurso
+compartilhado
+Processos devem ter uma mesma ordena¸ c˜ ao de eventos
+Se uma mensagem M1 do processo P foi enviada antes ou
+depois de M2 do processo Q
+Manuten¸ c˜ ao da consistˆ encia dos dados distribu ´ ıdos
+Veriﬁca¸ c˜ ao da autenticidade de uma requisi¸ c˜ ao
+Elimina¸ c˜ ao do processamento de atualiza¸ c˜ oes replicadas
+4 / 40
+
+=== PAGE 5 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Sincroniza¸ c˜ ao de Rel´ ogios
+Sistema Centralizado
+O tempo n˜ ao ´ e amb ´ ıguo
+Quando um processo necessitar saber a hora, faz uma
+chamada de sistema e o kernel responde
+Sistema Distribu ´ ıdo
+Conseguir acordo nos hor´ arios n˜ ao ´ e trivial
+5 / 40
+
+=== PAGE 6 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Rel´ ogios F ´ ısicos
+Praticamente todos os computadores tˆ em um circuito para
+monitorar a passagem do tempo
+Um temporizador de computador usualmente ´ e um cristal de
+quartzo lapidado e usinado com precis˜ ao
+Quando mantidos sob tens˜ ao, cristais de quartzo oscilam a
+uma frequˆ encia bem deﬁnida
+Associados com cada cristal h´ a dois registradores, um contador
+e um registrador de reten¸ c˜ ao (quanto tempo vai oscilar)
+Qualidade do oscilador ´ e importante para a precis˜ ao do sistema
+Cada oscila¸ c˜ ao do cristal reduz uma unidade do contador
+Quando o contador chega a zero ´ e gerado uma interrup¸ c˜ ao e
+o contador ´ e recarregado pelo registrador de reten¸ c˜ ao
+Cada interrup¸ c˜ ao ´ e denominada ciclo de rel´ ogio
+6 / 40
+
+=== PAGE 7 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Rel´ ogios F ´ ısicos
+´E imposs ´ ıvel garantir que todos os cristais em diferentes
+computadores funcionem exatamente ` a mesma frequˆ encia
+Tem-se que os rel´ ogios de software gradativamente saem de
+sincronia e informem valores diferentes quando lidos
+Essa diferen¸ ca ´ e denominada defasagem do rel´ ogio
+Programas que esperam que o hor´ ario associado com um
+arquivo, objeto, processo ou uma mensagem esteja correto e
+seja independente da m´ aquina na qual foi gerado podem falhar
+7 / 40
+
+=== PAGE 8 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Rel´ ogios F ´ ısicos
+Se uma das m´ aquinas possui rel´ ogio de alta precis˜ ao
+Manter todas as outras m´ aquinas sincronizadas com ela
+Se nenhuma m´ aquina possui rel´ ogio de alta precis˜ ao
+Cada uma cuida de seu pr´ oprio hor´ ario
+Como manter o hor´ ario das m´ aquinas umas com as outras?
+8 / 40
+
+=== PAGE 9 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Rel´ ogios F ´ ısicos
+As m´ aquinas tˆ em um temporizador que geraH interrup¸ c˜ oes
+por segundo
+Quando o tempo expira, adiciona-se 1 unidade ao clock C
+Quando o tempo UTC for t, o valor de clock de uma m´ aquina
+p ´ eCp(t)
+Cp(t) = t, para todo p e t (os rel´ ogios marcam sempre a hora
+real exata)
+C′
+p(t) = dC /dt = 1, (os rel´ ogios s˜ ao atualizados na mesma
+frequˆ encia da hora real)
+Condi¸ c˜ oes imposs ´ ıveis de serem obtidas na pr´ atica porque
+temporizadores n˜ ao interrompemH vezes por segundo
+O erro relativo aproximado dos temporizadores ´ e 10−5
+9 / 40
+
+=== PAGE 10 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Rel´ ogios F ´ ısicos
+Se existir alguma constante ρ tal que 1−ρ≤ dC/dt≤ 1 +ρ,
+pode-se dizer que o temporizador est´ a funcionando dentro de
+sua especiﬁca¸ c˜ ao
+A constante ρ ´ e dada pelo fabricante (taxa m´ axima de deriva)
+10 / 40
+
+=== PAGE 11 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Rel´ ogios F ´ ısicos
+Se dois rel´ ogios derivarem em dire¸ c˜ oes opostas em rela¸ c˜ ao ` a
+UTC, passado um tempo ∆ T ap´ os a sincroniza¸ c˜ ao entre os
+dois, eles podem apresentar uma defasagem de at´ e 2ρ∆t
+Se os projetistas de sistemas operacionais quiserem garantir
+que a defasagem entre dois rel´ ogios nunca seja maior do que
+δ, eles devem ser sincronizados novamente (em software) no
+m ´ ınimo a cadaδ/2ρ
+A diferen¸ ca entre os v´ arios algoritmos encontra-se na maneira
+como essa sincroniza¸ c˜ ao peri´ odica ´ e feita
+11 / 40
+
+=== PAGE 12 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Network Time Protocol (NTP)
+O NTP deﬁne uma arquitetura para um servi¸ co de tempo e
+um protocolo para distribuir informa¸ c˜ oes de tempo pela
+Internet
+Os principais objetivos de projeto e as caracter ´ ısticas do NTP
+Fornecer um servi¸ co que permita aos clientes na Internet serem
+sincronizados precisamente com o UTC
+Fornecer um servi¸ co conﬁ´ avel que possa sobreviver a longas
+perdas de conectividade
+Permitir que os clientes sejam sincronizadas de forma
+suﬁcientemente frequente para compensar as taxas de deriva
+encontradas na maioria dos computadores
+Fornecer prote¸ c˜ ao contra interferˆ encia no servi¸ co do tempo,
+seja mal-intencionada ou acidental
+12 / 40
+
+=== PAGE 13 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Network Time Protocol (NTP)
+Clientes consultam servidor de tempo que possui rel´ ogio de
+alta precis˜ ao
+Funcionamento
+Uma m´ aquina cliente envia mensagem para o servidor de
+tempo perguntando pela hora atual
+Servidor de tempo responde o mais r´ apido poss ´ ıvel, com uma
+mensagem contendo a hora atual CUTC
+O cliente obt´ em uma resposta e ajusta seu rel´ ogio
+Problemas
+H´ a atraso no envio das mensagens na rede
+O tempo pode retroceder
+13 / 40
+
+=== PAGE 14 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Network Time Protocol (NTP)
+14 / 40
+
+=== PAGE 15 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Network Time Protocol (NTP)
+Atraso no envio das mensagens na rede
+Solu¸ c˜ ao: ajustar rel´ ogio considerando estimativa de atraso
+Resultado ´ e melhorado usando hist´ orico de m´ edia de atrasos
+O tempo pode retroceder
+Solu¸ c˜ ao: corrigir a hora mudando o tempo gradativamente
+Ex: se cada interrup¸ c˜ ao da m´ aquina adiciona 10ms ao rel´ ogio
+Atrasar atualizando a cada 9ms ao inv´ es de 10ms
+Adiantar atualizando a cada 11ms ao inv´ es de 10ms
+15 / 40
+
+=== PAGE 16 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Network Time Protocol (NTP)
+Tempo para transmiss˜ ao de mensagem:
+atraso = [(T4− T1)− (T3− T2)]/2
+Diferen¸ ca de tempo entre os rel´ ogios:
+deslocamento = [(T2− T1 + atraso) + (T3− T4− atraso)]/2
+deslocamento = [(T2− T1) + (T3− T4)]/2
+16 / 40
+
+=== PAGE 17 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Network Time Protocol (NTP)
+atraso = [(T4− T1)− (T3− T2)]/2
+[(18− 9)− (9− 4)]/2 = [9− 5]/2 = 2
+deslocamento = [(T2− T1) + (T3− T4)]/2
+[(4− 9) + (9− 18)]/2 = [−5− 9]/2 =−7
+17 / 40
+
+=== PAGE 18 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Network Time Protocol (NTP)
+Cada computador pode possuir um n ´ ıvel de hierarquia
+(estrato)
+Rel´ ogio de referˆ encia: n ´ ıvel 0
+Servidor que possui o rel´ ogio de referˆ encia: n ´ ıvel 1
+Se servidor A tem n ´ ıvelk, B obt´ em hor´ ario de A, B possui
+n ´ ıvel (k + 1)
+Prevalece o hor´ ario do servidor com menor estrato
+18 / 40
+
+=== PAGE 19 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Network Time Protocol (NTP)
+As mensagens s˜ ao enviadas de maneira n˜ ao conﬁ´ avel, usando
+o protocolo UDP
+´E melhor a mensagem se perder do que romper a no¸ c˜ ao do
+tempo ou corrigida e provocar um atraso (TCP)
+Cada mensagem carrega carimbos de tempo ( timestamp) de
+eventos de mensagens recentes
+19 / 40
+
+=== PAGE 20 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Algoritmo de Berkeley
+´Util quando n˜ ao h´ a um rel´ ogio de referˆ encia
+O importante ´ e que as m´ aquinas tenham tempos aproximados
+Funcionamento
+O servidor respons´ avel (daemon de tempo) consulta todas as
+m´ aquinas de tempos em tempos, obtendo o hor´ ario de cada
+uma
+Depois calcula a m´ edia dos hor´ arios e informa a cada
+computador o deslocamento de tempo a ser feito
+O servidor pode inclusive mudar a pr´ opria hora
+20 / 40
+
+=== PAGE 21 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Algoritmo de Berkeley
+21 / 40
+
+=== PAGE 22 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Rel´ ogios L´ ogicos
+Proposto por Leslie Lamport
+Tem como objetivo estabelecer a ordem
+de eventos independentemente da hora
+real
+Embora a sincroniza¸ c˜ ao de rel´ ogios seja
+poss ´ ıvel, n˜ ao precisa ser absoluta
+Premissa importante ´ e que n˜ ao ´ e
+necess´ ario sincronizar processos que n˜ ao
+interagem entre si
+22 / 40
+
+=== PAGE 23 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Rel´ ogios L´ ogicos de Lamport
+Princ ´ ıpio importante ´ e a rela¸ c˜ aoacontece antes (→)
+Se a e b s˜ ao eventos do mesmo processo ea acontece antes de
+b, ent˜ ao:a→ b
+Se a ´ e o envio de uma mensagem e b ´ e o seu recebimento,
+ent˜ ao:a→ b
+Se a→ b e b→ c, ent˜ aoa→ c (propriedade transitiva)
+se x e y acontecem em processos diferentes que n˜ ao trocam
+mensagens, ent˜ aox→ y e y→ x s˜ ao falsas
+Esses processos s˜ ao consideradosconcorrentes
+Tempos s˜ ao dados como: sea→ b, C (a)< C (b), em que as
+horas l´ ogicas s˜ ao ajustadas
+23 / 40
+
+=== PAGE 24 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Rel´ ogios L´ ogicos de Lamport
+Para implementar rel´ ogios l´ ogicos de Lamport, cada processo
+Pi mant´ emi, contador local Ci
+Atualiza¸ c˜ ao dos contadores
+Antes de executar um evento, Pi executa Ci = Ci + 1
+Quando o processo Pi envia uma mensagem m a Pj, ajusta a
+marca de tempo de m, ts(m), para o valor de Ci
+Ao receber um mensagem m, o processo Pj ajusta seu pr´ oprio
+contador para Ci = max{Cj, ts(m)} e, depois disso, executa a
+primeira etapa e entrega a mensagem ` a aplica¸ c˜ ao
+24 / 40
+
+=== PAGE 25 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Rel´ ogios L´ ogicos de Lamport
+Quando h´ a inconsistˆ encia o algoritmo de Lamport corrige o
+rel´ ogio l´ ogico
+25 / 40
+
+=== PAGE 26 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Arquitetura dos Rel´ ogios L´ ogicos
+Arquitetura utilizada para a comunica¸ c˜ ao entre aplica¸ c˜ oes de
+processos diferentes
+26 / 40
+
+=== PAGE 27 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Multicast Totalmente Ordenado
+Ordem das atualiza¸ c˜ oes a ser executada deve ser a mesma em
+todos os servidores
+27 / 40
+
+=== PAGE 28 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Ordena¸ c˜ ao Total de Eventos
+Multicast que entrega mensagens na mesma ordem a cada
+receptor
+Mensagens transportam marca l´ ogica (timestamp) de tempo
+de seu remetente
+Mensagens s˜ ao ordenadas em ﬁla decache local pela marca
+l´ ogica de tempo
+Ap´ os receber mensagem, reconhecimento (ack) ´ e enviado em
+multicast
+Mensagem s´ o ´ e entregue ` a aplica¸ c˜ ao ap´ os reconhecimento de
+todos os processos e quando for a primeira mensagem da ﬁla
+Processo com menor id tem prioridade quando clocks s˜ ao
+iguais
+28 / 40
+
+=== PAGE 29 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Ordena¸ c˜ ao Total de Eventos
+29 / 40
+
+=== PAGE 30 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Ordena¸ c˜ ao Total de Eventos
+30 / 40
+
+=== PAGE 31 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Ordena¸ c˜ ao Total de Eventos
+31 / 40
+
+=== PAGE 32 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Ordena¸ c˜ ao Total de Eventos
+32 / 40
+
+=== PAGE 33 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Ordena¸ c˜ ao Total de Eventos
+33 / 40
+
+=== PAGE 34 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Causalidade em Rel´ ogios L´ ogicos Vetoriais
+Trcv (m1)< Tsnd(m3): poss ´ ıvel causalidade
+Trcv (m1)< Tsnd(m2): n˜ ao h´ a causalidade
+Logo, o modelo de algoritmo b´ asico de Lamport n˜ ao se
+preocupa com causalidade
+34 / 40
+
+=== PAGE 35 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Rel´ ogios L´ ogicos Vetoriais
+Proposta para solucionar problemas de causalidade
+apresentados nos modelos b´ asicos de rel´ ogios de Lamport com
+o uso de vetores
+Cada processo Pi mant´ em um vetorVCi com as propriedades
+VCi [i] ´ e o n´ umero de eventos que ocorreram emPi at´ e o
+instante em quest˜ ao
+Se VCi [j] = k, ent˜ aoPi sabe que k eventos ocorreram em Pj
+Portanto, Pi conhece o tempo local de Pj
+35 / 40
+
+=== PAGE 36 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Rel´ ogios L´ ogicos Vetoriais
+A entrega para a aplica¸ c˜ ao (processo) ´ e adiada at´ e que as
+seguintes condi¸ c˜ oes sejam satisfeitas
+Se ts(m)[i] = VCj[i] + 1: a mensagem que chegou ´ e a pr´ oxima
+que Pj espera de Pi
+Se ts(m)[i]≤ VCj[i] para todo k! = 1: Pj recebeu todas as
+mensagens que Pi recebeu antes de enviar a mensagem m
+36 / 40
+
+=== PAGE 37 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Rel´ ogios L´ ogicos Vetoriais
+Vetores dos processos s˜ ao iniciados comoVC0 = (0, 0, 0),
+VC1 = (0, 0, 0) e VC2 = (0, 0, 0)
+37 / 40
+
+=== PAGE 38 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Exerc ´ ıcios
+38 / 40
+
+=== PAGE 39 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+PAluno
+Hor´ arios
+Na K002 toda quarta-feira das 13h50m as 14h40m; 19h30m as
+21h00m e quinta-feira das 13h00m as 13h50m
+Contato
+Ramal 3859 e e-mail pozza@utfpr.edu.br
+39 / 40
+
+=== PAGE 40 ===
+Sincroniza¸ c˜ ao de Rel´ ogios Rel´ ogios F ´ ısicos Rel´ ogios L´ ogicos Exerc ´ ıcios D´ uvidas
+Sistemas Distribu ´ ıdos
+Grato pela aten¸ c˜ ao
+40 / 40

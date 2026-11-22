@@ -1,0 +1,434 @@
+
+
+=== PAGE 1 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+PROGRAMAC ¸˜AO DISTRIBU´IDA
+DEPARTAMENTO DE COMPUTAC ¸˜AO
+AULA 4
+Arquitetura de Sistemas Distribu ´ ıdos - Parte 2
+Prof. Rog´ erio Pozza
+pozza@utfpr.edu.br
+12 de junho de 2025
+1 / 36
+
+=== PAGE 2 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Sum´ ario
+1 Arquiteturas Descentralizadas
+2 Arquiteturas H ´ ıbridas
+3 Autogerenciamento
+4 Exerc ´ ıcios
+5 D´ uvidas
+2 / 36
+
+=== PAGE 3 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Arquiteturas Descentralizadas
+Cliente e servidor possuem duas distribui¸ c˜ oes:
+Distribui¸ c˜ ao Vertical
+Componentes logicamente diferentes em m´ aquinas diferentes
+(servidor de arquivos, servidor web etc.)
+Cada m´ aquina vai executar um conjunto espec ´ ıﬁco e
+pr´ e-determinado de fun¸ c˜ oes (cliente e servidor s˜ ao bem
+deﬁnidos)
+Deriva de fragmenta¸ c˜ ao vertical em BD distribu ´ ıdo
+Cada m´ aquina com uma coluna do banco de dados
+Arquitetura cliente/servidor multidividida ´ e um exemplo de
+distribui¸ c˜ ao vertical
+3 / 36
+
+=== PAGE 4 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Arquiteturas Descentralizadas
+Distribui¸ c˜ ao Horizontal
+Cliente ou servidor podem ser ﬁsicamente subdividido em
+partes logicamente equivalentes (colaborativa)
+Opera sobre uma parte do conjunto de dados, balanceando
+carga
+Sistemas peer-to-peer (P2P – par a par) s˜ ao uma das
+arquiteturas que suportam distribui¸ c˜ ao horizontal
+4 / 36
+
+=== PAGE 5 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Arquiteturas Descentralizadas
+Diferen¸ ca entre distribui¸ c˜ ao vertical / horizontal
+Distribui¸ c˜ ao verticalrefere-se ` a distribui¸ c˜ ao das diferentes
+camadas de arquitetura multicamada atrav´ es de m´ ultiplas
+m´ aquinas, em que cada camada ´ e implementada em uma
+m´ aquina diferente (controle centralizado)
+Distribui¸ c˜ ao horizontalpossui um ´ unica camada executada
+por m´ ultiplas m´ aquinas, como a distribui¸ c˜ ao de um ´ unico
+banco de dados (controle distribu ´ ıdo)
+Distribui¸ c˜ ao horizontal se refere ` a forma como os recursos s˜ ao
+divididos, enquanto a arquitetura descentralizada se refere ` a
+forma como as decis˜ oes s˜ ao tomadas
+5 / 36
+
+=== PAGE 6 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Arquiteturas Descentralizadas
+Exemplo de Distribui¸ c˜ ao horizontal: Dropbox
+6 / 36
+
+=== PAGE 7 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Arquiteturas Descentralizadas P2P
+Descentralizadas P2P
+Processos s˜ ao todos iguais eﬂat (ausˆ encia de hierarquia e com
+as mesmas responsabilidades)
+Cada processo age ao mesmo tempo como cliente e servidor
+(servente)
+O cliente ´ e que inicia a requisi¸ c˜ ao
+Todos os processos executam o mesmo c´ odigoe oferecem o
+mesmo conjunto de interfaces uns para os outros
+7 / 36
+
+=== PAGE 8 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Arquiteturas Descentralizadas P2P
+Rede de sobreposi¸ c˜ ao – rede em que os n´ os s˜ ao formados pelos
+processos e os enlaces denotam os canais de comunica¸ c˜ ao
+Processos n˜ ao se comunicam diretamente e sim por meio dos
+canais de comunica¸ c˜ ao dispon ´ ıveis
+Camada adicional de conex˜ oes que interliga os n´ os de uma
+rede, permitindo se comuniquem diretamente entre si,
+independentemente da infraestrutura f ´ ısica subjacente
+8 / 36
+
+=== PAGE 9 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Arquiteturas Descentralizadas P2P
+Arquiteturas P2P tˆ em um comportamento sim´ etrico, e s˜ ao
+projetadas para organizar seus processos em uma rede de
+sobreposi¸ c˜ ao(overlay)
+Rede de hosts de um sistema distribu ´ ıdo projetada
+virtualmente sobre outra rede
+Exemplos
+WhatsApp – utiliza rede P2P utiliza uma rede overlay para
+conectar usu´ arios sem passar por um servidor centralizado
+Tor – utiliza uma s´ erie derelays para encaminhar os dados por
+uma rede overlay criptografada
+9 / 36
+
+=== PAGE 10 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Arquiteturas Descentralizadas P2P
+Modelo Cliente/Servidor tem uma estrat´ egia direta e
+relativamente simples para o compartilhamento de recursos
+e dados, e pouca ﬂexibilidade em rela¸ c˜ ao escalabilidade
+Modelo Cliente/Servidor tem o prop´ osito de distribuir
+processamento mas n˜ ao os recursos
+Quanto mais clientes conectados ao servidor maior a
+probabilidade de comprometimento da qualidade de servi¸ co
+Sistemas P2P tem como proposta que a comunica¸ c˜ ao e os
+recursos computacionais pertencentes aos usu´ arios de um
+servi¸ co tamb´ em possam ser utilizados para suportar esse
+servi¸ co
+O aumento de usu´ arios incrementa a disponibilidade de
+recursos para executar um servi¸ co
+10 / 36
+
+=== PAGE 11 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Arquiteturas Descentralizadas P2P
+Hardware e software atuais tˆ em maior capacidade de
+processamento e de funcionalidades do que os antigos
+Dispositivos computacionais atuais possuem conex˜ ao
+constante de rede com banda larga
+Arquitetura descentralizada, como P2P, pode explorar a
+disponibilidade dos recursos dessas m´ aquinas para executar,
+de forma colaborativa, uma atividade
+Cada objeto ´ e replicado em v´ arios dispositivos computacionais
+para a distribui¸ c˜ ao da carga de processamento e possibilidade
+de recupera¸ c˜ ao na falha ou desconex˜ ao de dispositivos
+Rede P2P ´ e mais complexa do que redes Cliente/Servidor
+Exemplo: rede Bitcoin
+11 / 36
+
+=== PAGE 12 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Arquiteturas Descentralizadas P2P
+Tipos de organiza¸ c˜ ao de sistemas P2P s˜ ao baseados na
+maneira como os n´ os se organizam e se comunicam entre si
+Estruturada
+N˜ ao estruturada
+Hier´ arquica
+12 / 36
+
+=== PAGE 13 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Arquiteturas P2P Estruturadas
+Topologia ´ e bem determinada (grade, anel, ´ arvore)
+Cada host ou peer tem um id e se comunica com vizinhos
+Para encontrar um determinado host (chave ou id) a
+requisi¸ c˜ ao ´ e repassada para o vizinho mais pr´ oximo
+13 / 36
+
+=== PAGE 14 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Arquiteturas P2P Estruturadas
+Blockchain
+Redes P2P Cubo s˜ ao caracterizadas pela conex˜ ao direta e
+complexa entre os n´ os
+Cluster geralmente tˆ em conex˜ oes mais simples e limitadas
+entre os n´ os
+Cada tipo de arquitetura ´ e adequado para diferentes tipos de
+aplica¸ c˜ ao e necessidades de processamento
+14 / 36
+
+=== PAGE 15 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Arquiteturas P2P Estruturadas
+O Blockchain, Tor e Hyphanet apresentam caracter ´ ısticas
+distintas de sistemas distribu ´ ıdos.
+Cada um aborda tarefas como anonimato, valida¸ c˜ ao de
+transa¸ c˜ oes ou armazenamento de dados de forma ´ unica.
+Aspecto Tor Blockchain Hyphanet (Free-
+net)
+Distribui¸ c˜ ao
+de Tarefas
+Relays processam
+tr´ afego.
+N´ os validam
+transa¸ c˜ oes.
+N´ os armazenam e
+compartilham da-
+dos.
+Centraliza¸ c˜ ao
+Parcial
+Directory Authori-
+ties.
+Nenhuma (total-
+mente descentrali-
+zado).
+Totalmente des-
+centralizado.
+Finalidade Anonimizar
+tr´ afego da In-
+ternet.
+Garantir in-
+tegridade de
+transa¸ c˜ oes.
+Armazenamento
+e publica¸ c˜ ao
+anˆ onimos.
+15 / 36
+
+=== PAGE 16 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Arquiteturas P2P Estruturadas
+Em uma rede de sobreposi¸ c˜ ao estruturada as mensagens s˜ ao
+encaminhadas de acordo com a topologia de sobreposi¸ c˜ ao
+Como os caminhos s˜ ao l´ ogicos, pode ocorrer de dois n´ os
+vizinhos estarem ﬁsicamente muito distantes
+Ir´ a requerer encaminhamento de uma mensagem por um
+caminho muito longo na rede f ´ ısica subjacente
+16 / 36
+
+=== PAGE 17 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Arquiteturas P2P Estruturadas
+Para desenvolver uma rede de sobreposi¸ c˜ ao utiliza-se um
+mecanismo determin ´ ısticoe estruturado
+Mecanismo usado comumente ´ e DHT (Distributed Hash
+Table)
+Dados e n´ os recebem uma chave aleat´ oria (128 a 160 bits)
+Ao consultar um determinado item de dado, o endere¸ co de
+rede do n´ o com o conte´ udo ´ e retornado
+Nesse caso, a requisi¸ c˜ ao ´ e roteada entre os n´ os at´ e alcan¸ car o
+n´ o com o dado solicitado
+Desaﬁo – dado uma chave de um dado, mapear para o
+identiﬁcador de um n´ o
+17 / 36
+
+=== PAGE 18 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Arquiteturas P2P Estruturadas
+CHORD – implementa¸ c˜ ao de uma DHT para redes P2P
+N´ os est˜ ao logicamente organizados em um anel
+Cada n´ o recebe um identiﬁcador aleat´ orio (semelhante a um
+RG)
+18 / 36
+
+=== PAGE 19 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Arquiteturas P2P Estruturadas
+Objeto est´ a emsucc(K ) − sucessor
+Tabela de roteamento ( Finger Table) de p
+FTp[i] = succ(p + 2i−1)
+Roteamento
+Envie item com chave k para n´ o com ´ ındicej em FT , tal que
+FTp[j] ⩽ k ⩽ FTp[j + 1] (envie para seu sucessor, caso n˜ ao
+exista)
+19 / 36
+
+=== PAGE 20 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Arquiteturas P2P Estruturadas
+20 / 36
+
+=== PAGE 21 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Arquiteturas P2P N˜ ao Estruturadas
+Redes de sobreposi¸ c˜ ao n˜ ao estruturadas
+Algoritmos aleat´ orios s˜ ao utilizados para construir a rede de
+sobreposi¸ c˜ ao
+Cada n´ o mant´ em uma lista de n´ os vizinhos
+Dados s˜ ao tamb´ em organizados aleatoriamente
+Como ´ e realizada a busca?
+Inundar toda a rede ( ﬂooding )
+Repassar para vizinhos aleat´ orios (random walk )
+21 / 36
+
+=== PAGE 22 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Arquiteturas P2P Hier´ arquicas
+A medida que a rede cresce, localizar itens de dados em
+sistemas P2P n˜ ao estruturados pode ser problem´ atico
+N´ os diret´ orios e/ou intermedi´ arios
+Sempre que um n´ o comum se junta a rede, se liga a um dos
+superpares
+Problema – sele¸ c˜ ao do l ´ ıder
+22 / 36
+
+=== PAGE 23 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Arquiteturas P2P Hier´ arquicas
+Superpares (gateway) devem ter vida longa e alta
+disponibilidade (ex: eMule)
+23 / 36
+
+=== PAGE 24 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Arquiteturas P2P Hier´ arquicas
+Superpares necessitam de algoritmos de escolhas para o n´ o
+cluster
+Disponibilidade, processamento e conﬁabilidade ´ e um requisito
+para a sele¸ c˜ ao do n´ ocluster
+24 / 36
+
+=== PAGE 25 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Arquiteturas H ´ ıbridas
+Solu¸ c˜ oes cliente/servidor s˜ ao combinadas com a forma de
+funcionamento da arquitetura descentralizada
+H ´ ıbrida – Centralizada + Descentralizada
+Centralizada – servidor de diret´ orio
+Descentralizada – Distribui¸ c˜ ao do conte´ udo
+BitTorrent, WhatsApp
+25 / 36
+
+=== PAGE 26 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Arquiteturas H ´ ıbridas
+BitTorrent
+Inicialmente um esquema de procura de arquivos utilizando
+arquitetura Cliente/Servidor
+Subsequentemente, o n´ o junta-se para dar um mecanismo
+descentralizado de colabora¸ c˜ ao
+Trackers gerenciam pares ativos e indicam quem tem os dados
+Estrutura centralizada ou distribu ´ ıda com DHT
+26 / 36
+
+=== PAGE 27 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Arquiteturas H ´ ıbridas
+BitTorrent
+Pares fazem download/upload de blocos de um arquivo com
+outros pares (vizinhos)
+Seed ´ e o par em que um arquivo completo est´ a sendo
+compartilhado
+Leecher ´ e o par que est´ a realizando o download de um arquivo
+ou que j´ a realizou
+Swarm ´ e o conjunto de pares que compartilham um arquivo
+27 / 36
+
+=== PAGE 28 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Arquiteturas H ´ ıbridas
+BitTorrent
+28 / 36
+
+=== PAGE 29 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Arquiteturas H ´ ıbridas
+Computa¸ c˜ ao na borda da rede (edge computing )
+Otimiza a distribui¸ c˜ ao de conte´ udo e processamento
+Dispositivos de clientes tamb´ em podem fazer parte (fog
+computing)
+29 / 36
+
+=== PAGE 30 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Arquiteturas H ´ ıbridas
+P2P Modernos
+Popcorn Time
+IPFS
+TOR
+BitTorrent
+Bitcoin
+Freenet
+30 / 36
+
+=== PAGE 31 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Autogerenciamento em SD
+SD precisam fornecer solu¸ c˜ oes gerais de blindagem contra
+aspectos indesej´ aveis inerentes a redes
+Objetivo
+Suportar o maior n´ umero poss ´ ıvel de aplica¸ c˜ oes
+Solu¸ c˜ ao
+Sistemas Distribu ´ ıdos Adaptativos
+Ideia
+Desenvolver sistemas que seja poss ´ ıveis fazer monitora¸ c˜ ao e
+ajustes
+31 / 36
+
+=== PAGE 32 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Autogerenciamento em SD
+32 / 36
+
+=== PAGE 33 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Autogerenciamento em SD
+AWS
+Amazon CloudWatch monitora e coleta m´ etricas sobre os
+recursos da AWS e aplicativos em execu¸ c˜ ao
+Amazon EC2 Auto Scaling , que ajusta automaticamente a
+capacidade computacional com base na demanda
+Azure
+Azure Monitor coleta e analisa dados de desempenho de
+aplicativos e infraestrutura em tempo real
+Azure Automation permite automatizar tarefas manuais
+repetitivas e demoradas, como provisionamento de recursos,
+conﬁgura¸ c˜ ao e gerenciamento de atualiza¸ c˜ oes
+Gerenciamento de tr´ afego a´ ereo
+Utiliza algoritmos de IA para analisar dados em tempo real e
+tomar decis˜ oes automatizadas sobre o controle do tr´ afego
+a´ ereo, reduzindo o risco de colis˜ oes e aumentando a eﬁciˆ encia
+do ﬂuxo de tr´ afego
+33 / 36
+
+=== PAGE 34 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Exerc ´ ıcios
+Moodle
+34 / 36
+
+=== PAGE 35 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+PAluno
+Hor´ arios
+Na K002 toda quarta-feira das 13h50m as 14h40m; 19h30m as
+21h00m e quinta-feira das 13h00m as 13h50m
+Contato
+Ramal 3859 e e-mail pozza@utfpr.edu.br
+35 / 36
+
+=== PAGE 36 ===
+Arquiteturas Descentralizadas Arquiteturas H ´ ıbridas Autogerenciamento Exerc ´ ıcios D´ uvidas
+Sistemas Distribu ´ ıdos
+Grato pela aten¸ c˜ ao
+36 / 36

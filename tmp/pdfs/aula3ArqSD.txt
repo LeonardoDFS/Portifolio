@@ -1,0 +1,436 @@
+
+
+=== PAGE 1 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+SISTEMAS DISTRIBU´IDOS
+DEPARTAMENTO DE COMPUTAC ¸˜AO
+AULA 3
+Arquitetura de Sistemas Distribu ´ ıdos - Parte 1
+Prof. Rog´ erio Pozza
+pozza@utfpr.edu.br
+26 de novembro de 2024
+1 / 36
+
+=== PAGE 2 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Sum´ ario
+1 Introdu¸ c˜ ao
+2 Arquitetura de Sistemas Distribu ´ ıdos
+Tipos de Arquiteturas de Sistemas
+3 Arquiteturas Centralizadas
+4 Exerc ´ ıcios
+5 D´ uvidas
+2 / 36
+
+=== PAGE 3 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Introdu¸ c˜ ao
+Arquitetura de Software determina como os v´ arios
+componentes de software s˜ ao organizados e interagem entre si
+(Arquitetura de Sistema)
+Trˆ es tipos de arquiteturas
+Centralizadas
+Descentralizadas
+H ´ ıbridas
+Camada de middleware ´ e uma decis˜ ao arquitetˆ onica
+importante (transparˆ encia de distribui¸ c˜ ao)
+Arquitetura de Sistemas com Fabio Akita – Link
+3 / 36
+
+=== PAGE 4 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Introdu¸ c˜ ao – Modelos
+Modelos
+F ´ ısicos descrevem explicita o sistema (hardware)
+Arquitetura descrevem em rela¸ c˜ ao ` as tarefas computacionais e
+de comunica¸ c˜ ao
+4 / 36
+
+=== PAGE 5 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Introdu¸ c˜ ao – Modelos F ´ ısicos
+Primitivos (b´ asico para envio de mensagens)
+Distribu ´ ıdos Primitivos
+Suportam pequena variedade de servi¸ cos (1970 e come¸ co de
+1980)
+Rede local e Internet limitada
+Compartilhamento de impressoras, arquivos, envio de e-mails
+Homogˆ eneos e n˜ ao eram abertos
+Qualidade de servi¸ co muito inicial
+5 / 36
+
+=== PAGE 6 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Introdu¸ c˜ ao – Modelos F ´ ısicos
+Distribu ´ ıdos Adaptados para a Internet
+Ap´ os 1990, devido ao crescimento da Internet
+Grande quantidade de n´ os (redes de redes ou a Internet)
+Sistemas distribu ´ ıdos globais
+Forneciam servi¸ cos distribu ´ ıdos para empresas fora dos limites
+organizacionais
+Heterogeneidade (redes, sistemas operacionais, equipes de
+desenvolvimento)
+Middleware (padr˜ oes abertos e CORBA –Common Object
+Request Broker Architecture )
+6 / 36
+
+=== PAGE 7 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Introdu¸ c˜ ao – Modelos F ´ ısicos
+Sistemas Distribu ´ ıdos Contemporˆ aneos
+Computa¸ c˜ ao m´ ovel
+Computa¸ c˜ ao ub ´ ıqua (ou pervasiva) –hosts s˜ ao incorporados
+em objetos comuns
+Computa¸ c˜ ao em nuvem (arquiteturas declusters fornecem
+servi¸ cos)
+Mais complexo/heterogeneidade
+Tecnologias de interliga¸ c˜ ao em uma grande variedade de
+aplicativos e servi¸ cos
+De grande escala, explorando a Internet para desenvolver
+sistemas distribu ´ ıdos globais
+7 / 36
+
+=== PAGE 8 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Introdu¸ c˜ ao – Modelos F ´ ısicos
+Sistemas Distribu ´ ıdos de Sistemas
+Sistemas distribu ´ ıdos cuja complexidade da arquitetura f ´ ısica
+representa um sistema composto de v´ arios outros sistemas
+Sistemas de Sistemas ´ e complexo, em que consiste em uma
+s´ erie de subsistemas que s˜ ao agrupados para executarem uma
+ou mais tarefas
+8 / 36
+
+=== PAGE 9 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Introdu¸ c˜ ao – Modelos de Arquiteturas
+´E uma estrutura em termos de inter rela¸ c˜ oes entre seus
+componentes
+Tem como principal objetivo atender demandas atuais e
+possivelmente futuras
+Tornar o sistema
+Conﬁ´ avel
+Gerenci´ avel
+Adapt´ avel
+Rent´ avel
+Compromissos relacionados ` a escolha
+dos elementos arquitetˆ onicos empregados
+dos padr˜ oes adotados
+do middleware utilizado
+Compromissos podem afetar o desempenho e a eﬁciˆ encia dos
+sistema desenvolvido
+9 / 36
+
+=== PAGE 10 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Arquitetura de Sistemas Distribu ´ ıdos
+Estilos Arquitetˆ onicos
+Arquitetura de Sistemas
+10 / 36
+
+=== PAGE 11 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Estilos Arquitetˆ onicos
+Conceitos sobre padr˜ oes arquitetˆ onicos em SD
+Aborda solu¸ c˜ oes em SD que podem ser aplicados a v´ arios
+dom ´ ınios de problemas
+Conceito fundamental para o entendimento do
+desenvolvimento de aplica¸ c˜ oes em ambientes distribu ´ ıdos
+Para sua representa¸ c˜ ao pode-se utilizar componentes e
+conectores para ilustrar v´ arias conﬁgura¸ c˜ oes (padr˜ oes
+arquitetˆ onicos)
+Padr˜ oes n˜ ao s˜ ao solu¸ c˜ oes completas em si, mas oferecem
+ideias parciais que, quando combinadas, levam o projetista a
+boas solu¸ c˜ oes
+11 / 36
+
+=== PAGE 12 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Estilos Arquitetˆ onicos
+Um estilo arquitetˆ onico ´ e determinado atrav´ es
+Componentes – unidade modular com interfaces requeridas e
+fornecidas bem deﬁnidas que ´ e substitu ´ ıvel dentro do seu
+ambiente
+Conex˜ oes– o modo como os componentes est˜ ao ligados, em
+que serve como mediador da comunica¸ c˜ ao ou da coopera¸ c˜ ao
+entre componentes
+Dados intercambiados – forma de troca dos dados entre
+componentes (caixa postal, reposit´ orio compartilhado?)
+Formas de conﬁgura¸ c˜ ao– maneiras como os componentes
+s˜ ao conﬁgurados (em tempo de execu¸ c˜ ao?)
+12 / 36
+
+=== PAGE 13 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Tipos de Estilos Arquitetˆ onicos
+Arquiteturas em Camadas
+Arquiteturas Baseada em Objetos
+Arquiteturas Baseadas em Servi¸ cos
+Arquiteturas Baseadas em Recursos
+Arquiteturas Centrada em Dados
+Arquiteturas Baseadas em Eventos
+13 / 36
+
+=== PAGE 14 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Arquiteturas em Camadas
+Componentes s˜ ao organizados em camadas
+Componente da camada N tem permiss˜ ao para chamar
+componentes da camada N-1
+Como nas camadas de rede TCP/IP
+14 / 36
+
+=== PAGE 15 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Arquiteturas em Camadas
+Frontend/Backend/DB (popular em sistemas web)
+15 / 36
+
+=== PAGE 16 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Arquiteturas Baseadas em Objetos
+Objetos s˜ ao os componentes
+Objetos s˜ ao conectados a outros por chamada remotamente
+Amplamente explorado em sistemas Cliente/Servidor
+16 / 36
+
+=== PAGE 17 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Arquiteturas Baseadas em Objetos
+Provˆ e uma maneira sistem´ atica para encapsular dados e
+funcionalidades
+Dados: Estado do objeto
+Funcionalidades: M´ etodos providos pelo objeto
+Interface oferecida pelo objeto n˜ ao mostra os detalhes de
+implementa¸ c˜ ao
+Objeto independente do ambiente
+17 / 36
+
+=== PAGE 18 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Arquiteturas Baseadas em Objetos
+Componentes na conex˜ ao entre objetos distribu ´ ıdos
+18 / 36
+
+=== PAGE 19 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Arquiteturas Baseadas em Servi¸ co
+Procede da arquitetura baseada em objetos, em que a
+premissa ´ e de que os objetos prestam servi¸ cos em entidades
+independentes
+Mesmo que pudessem usar servi¸ cos de outros objetos
+Pode-se pensar em uma arquitetura orientada a servi¸ cos
+(SOA)
+Separando o sistema em v´ arios servi¸ cos independentes
+SD ´ e uma composi¸ c˜ ao dos servi¸ cos
+Esses servi¸ cos n˜ ao precisam estar sob o mesmo dom ´ ınio
+administrativo
+19 / 36
+
+=== PAGE 20 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Arquiteturas Baseadas em Servi¸ co
+Exemplos: sistema de venda de e-book
+Sistema de processamento de pedidos
+Opera num banco de dados local, que cont´ em os produtos
+Processamento de pedido
+Sele¸ c˜ ao de itens
+Registro (login)
+Veriﬁcar o canal de entrega (por exemplo, e-mail)
+Pagamento
+Pagamento pode ser gerido por algum servi¸ co
+Paypal, PagSegura, MercadoPago, etc.
+Basta ter uma maneira adequada de comunica¸ c˜ ao entre
+servi¸ co
+Provendo interfaces de uso
+N˜ ao necessariamente trivial
+20 / 36
+
+=== PAGE 21 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Arquiteturas Baseadas em Recursos
+Conex˜ ao dos diversos servi¸ cos pode se tornar problem´ atica
+Mudar a vis˜ ao de sistemas distribu ´ ıdos para um conjunto de
+recursos (ROA – Resource-Oriented Architecture )
+Cada recurso ´ e individualmente gerenciado por componentes
+(URI)
+Recursos podem ser adicionados, removidos, alterados e
+obtidos por aplica¸ c˜ oes, possivelmente remotas
+Modelo REST ( Representational State Transfer )
+Recursos s˜ ao identiﬁcados por um esquema de nomea¸ c˜ ao
+´ unico
+Todos os servi¸ cos oferecem a mesma interface, atrav´ es das
+opera¸ c˜ oes PUT, GET, DELETE e POST do HTTP/HTTPS
+Mensagens enviadas a um servi¸ cos s˜ ao completamente
+auto-descritas
+Ap´ os a execu¸ c˜ ao, o componente esquece sobre o chamador
+(sem estado)
+21 / 36
+
+=== PAGE 22 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Arquiteturas Baseadas em Recursos
+SOA ´ e mais adequada para sistemas complexos e com alto
+grau de acoplamento funcional
+ROA ´ e mais adequada para sistemas simples e com baixo
+acoplamento funcional (ou baixa dependˆ encia de outras partes
+de um sistema)
+Exemplos de ROA
+API RESTful do Twitter
+Armazenamento de dados, como S3 ( Single Storage Service )
+da Amazon
+IBM Watson IoT Plataform e ThingSpeak
+22 / 36
+
+=== PAGE 23 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Arquiteturas Centradas em Dados
+Componentes se comunicam atrav´ es de um reposit´ orio
+comum e como se fosse uma caixa postal
+Fracamente acoplados (Apache Hadoop)
+23 / 36
+
+=== PAGE 24 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Arquiteturas Baseadas em Eventos
+Sistema publica¸ c˜ ao/subscrever (publish/subscribe)
+Componentes publicam eventos e certiﬁcam que somente os
+que subscreveram recebam esses eventos
+Fracamente acoplados – n˜ ao invocam explicitamente um ao
+outro (exemplo: Apache Kafka e MQTT)
+24 / 36
+
+=== PAGE 25 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Tipos de Arquiteturas de Sistemas
+Como os SD s˜ ao organizados na pr´ atica?
+Onde s˜ ao executados os componentes de software?
+Como eles se comunicam?
+H´ a um elemento central?
+25 / 36
+
+=== PAGE 26 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Tipos de Arquiteturas de Sistemas
+Arquiteturas Centralizadas
+Cliente/Servidor, Netﬂix, site de not ´ ıcias, online bank
+Arquiteturas Descentralizadas
+Sistemas Peer–to–Peer, como o CHORD, torrent
+Arquiteturas H ´ ıbridas
+Sistemas Peer–to–Peer, como o BitTorrent, Skype e WhatsApp
+26 / 36
+
+=== PAGE 27 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Arquiteturas Centralizadas
+Modelo Cliente/Servidor
+Processos s˜ ao divididos em dois grupos
+Servidor – processo implementa um servi¸ co espec ´ ıﬁco
+Cliente – processo que requisita um servi¸ co ao servidor
+Forma de intera¸ c˜ ao requisi¸ c˜ ao/resposta
+27 / 36
+
+=== PAGE 28 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Comunica¸ c˜ ao em Arquiteturas Centralizadas
+Protocolo sem conex˜ ao
+Protocolo simples que funciona bem em redes locais
+Cliente empacota uma mensagem para o servidor diretamente
+Eﬁciente se n˜ aoocorrem problemas
+Distinguir entre a perda da mensagem de requisi¸ c˜ ao e a perda
+da mensagem de resposta do servidor ( timeout)
+Reenviar mensagem ´ e suﬁciente para resolver?
+Exemplo: Falhas em transferˆ encias banc´ arias
+Transferir R$ 5000,00 ou perguntar o saldo
+Opera¸ c˜ oes podem ser repetidas sem causar danos:
+idempotentes
+M´ ultiplos acessos ou pedidos a um recurso devem ter o
+mesmo efeito que um acesso somente
+28 / 36
+
+=== PAGE 29 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Comunica¸ c˜ ao em Arquiteturas Centralizadas
+Protocolo orientado a conex˜ ao
+Solu¸ c˜ ao funciona bem em sistemas de longa distˆ ancia
+Em redes locais, a conﬁabilidade ´ e mais elevada
+Sempre que um cliente requisita um servi¸ co, primeiro se
+estabelece conex˜ ao com o servidor e depois se envia a
+requisi¸ c˜ ao
+Pode ser muito caro, principalmente em aplica¸ c˜ oes com
+mensagens pequenas
+Quantidade de mensagens trocadas para abertura e
+encerramento de conex˜ oes
+Quantidade de informa¸ c˜ oes adicionadas aos segmentos
+29 / 36
+
+=== PAGE 30 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Arquiteturas Centralizadas
+com Camadas de Aplica¸ c˜ ao
+30 / 36
+
+=== PAGE 31 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Arquiteturas Centralizadas
+com Camadas de Aplica¸ c˜ ao
+Considerando muitas aplica¸ c˜ oes e sua escalabilidade
+N ´ ıvel de Interface de Usu´ ario
+Programas que permitam aos usu´ arios ﬁnais interagir com
+aplica¸ c˜ oes
+Diversos n ´ ıveis de complexidade
+N ´ ıvel de Processamento
+Normalmente cont´ em as aplica¸ c˜ oes propriamente ditas
+Exemplo: An´ alise de dados ﬁnanceiros que pode exigir
+m´ etodos e t´ ecnicas soﬁsticados de estat ´ ısticas e IA
+N ´ ıvel de Dados
+Na sua forma mais simples, consiste em um sistema de
+arquivos
+Mais comum utilizar um banco de dados
+Normalmente implementado no lado servidor
+Mant´ em os dados consistentes
+Dados costumam ser persistentes
+31 / 36
+
+=== PAGE 32 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Arquiteturas Centralizadas
+com Arquiteturas Multidivididas
+Gerenciamento de Sistemas
+Clientes gordos ( fat clients )
+Clientes magros ( thin clients )
+Distin¸ c˜ ao clara
+Arquitetura de duas divis˜ oes(cliente e servidor)
+32 / 36
+
+=== PAGE 33 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Arquiteturas Centralizadas
+com Arquiteturas Multidivididas
+Arquitetura de trˆ es divis˜ oes
+Cliente
+Servidor
+Servidor que pode agir como cliente (recebe e faz requisi¸ c˜ ao)
+33 / 36
+
+=== PAGE 34 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Exerc ´ ıcios
+Moodle
+34 / 36
+
+=== PAGE 35 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+PAluno
+Hor´ arios
+Na K002 toda quarta-feira das 13h50m as 14h40m; 19h30m as
+21h00m e quinta-feira das 13h00m as 13h50m
+Contato
+Ramal 3859 e e-mail pozza@utfpr.edu.br
+35 / 36
+
+=== PAGE 36 ===
+Introdu¸ c˜ ao Arquitetura de Sistemas Distribu ´ ıdos Arquiteturas Centralizadas Exerc ´ ıcios D´ uvidas
+Sistemas Distribu ´ ıdos
+Grato pela aten¸ c˜ ao
+36 / 36
